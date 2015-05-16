@@ -1,0 +1,117 @@
+// MESSAGES
+.messages {
+  // @include full-width-background($grey);
+  padding-left: $horizontal-space * 2;
+  padding-right: $horizontal-space * 2;
+  color: #fff;
+  // Fix color clashes with links.
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  ul { margin: 0 0.5em 0 1.5em; }
+  margin-top: $vertical-space;
+  margin-bottom: $vertical-space;
+
+  // Contrained without the clearfix.
+  max-width: $desktop;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.messages + .messages {
+  margin-top: $vertical-space / 2;
+}
+
+// Override for inline messages. (Commerce Payment Checkout)
+.form-wrapper .messages {
+  margin-top: 0;
+}
+
+// Max length message override.
+.counter.messages {
+  padding: 0.25em 0.5em;
+  margin: 0.5em 0;
+}
+
+.messages__inner {
+  @extend %l-constrained;
+  position: relative;
+  padding-top: $vertical-space;
+  padding-bottom: $vertical-space;
+  margin-left: $vertical-space;
+  margin-right: $vertical-space;
+
+  &:before {
+    // @extend %fa-icon-core;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    margin-left: -($vertical-space * 2 - 10);
+    margin-top: -0.25em;
+    border-radius: 50%;
+    overflow: hidden;
+    vertical-align: middle;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+  }
+}
+
+.messages.warning,
+.messages--warning {
+  background-color: $yellow;
+  background-position: 0 50%;
+  .messages__inner:before {
+    // content: $fa-var-exclamation;
+    color: $yellow;
+  }
+}
+
+.messages.error,
+.messages--error {
+  color: #fff;
+  // important because of div.error.
+  background-color: $red;
+  background-position: 0 50%;
+  .messages__inner:before {
+    // content: $fa-var-exclamation;
+    color: $red;
+  }
+}
+
+.messages.status,
+.messages--status,
+.messages.ok,
+.messages--ok {
+  background-color: $green;
+  background-position: 0 50%;
+  .messages__inner:before {
+    // content: $fa-var-check;
+    color: $green;
+  }
+}
+
+.messages__close {
+  // Positioning.
+  position: absolute;
+  right: -40px;
+  margin-top: -0.25em;
+  // Box Model.
+  width: 30px;
+  height: 30px;
+  // Important to overide other a tags in messages.
+  text-decoration: none !important;
+  // Visual.
+  &:before {
+    // @extend %fa-icon-core;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    font-size: 1.25em;
+    line-height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    // content: $fa-var-times;
+  }
+}

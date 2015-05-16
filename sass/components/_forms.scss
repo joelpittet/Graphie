@@ -1,0 +1,151 @@
+// @file
+// Form Styling
+
+// Breaks labels onto the next line without putting extra clickable
+// area for them.
+label { display: table; }
+
+// Wrapper for a form element (or group of form elements) and its label
+.form-item,
+.form-actions {
+  // Reminder, don't put margin on top, it messes with floats
+  // because of how they collapse.
+  margin-bottom: 1em;
+
+  label.option {
+    display: inline;
+    font-weight: normal;
+  }
+  .description { @include font-size(14px); }
+}
+
+.form-item { @include clearfix; }
+
+.container-inline .form-item {
+  // Fix cleafixes from the above form item.
+  &:after { display: none; }
+}
+
+// Highlight the form elements that caused a form submission error
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 1px solid #c00;
+}
+
+// The label for a form element
+.form-item label {
+  font-weight: bold;
+  display: table;
+  margin-bottom: 5px;
+}
+
+// The label for a radio button or checkbox
+.form-item label.option { display: inline; }
+
+.form-checkbox,
+.form-radio { vertical-align: middle; }
+
+// The part of the label that indicates a required field
+.marker,
+.form-required { color: $error-text-color; }
+
+// The descriptive help text (separate from the label)
+.form-item .description { @include font-size(14px); }
+
+// Pack groups of checkboxes and radio buttons closer together
+// Drupal core uses "0.4em 0"
+.form-checkboxes,
+.form-radios {
+  // .form-item { margin-bottom: 0.4em; }
+  .description { margin-left: 2.4em; }
+}
+.form-checkboxes .form-item,
+.form-radios .form-item { margin: 0; }
+
+// The submit button
+.form-submit {
+  background: $grey-dark;
+  padding: 1.2em 5em;
+  color: $white;
+}
+
+.container-inline div,
+.container-inline label { display: inline; }
+
+// Table Form Items
+tr .form-item {
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+// Inline Items
+.container-inline .form-actions,
+.container-inline.form-actions {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form-search,
+.form-textarea,
+.form-text {
+  max-width: 100%; // Fixes mobile over extending box.
+  padding: 0.5em;
+  background: $grey-clear;
+  border: 0;
+  font-weight: 700;
+
+  &:focus {
+    border-color: $green;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1) inset;
+  }
+
+  // iOS safari fixes.
+  // -webkit-appearance: none;
+  border-radius: 0;
+}
+
+// Matches button height for inline - JP
+.form-text { height: 32px; }
+
+::-moz-selection,
+::-o-selection,
+::-ms-selection,
+::-webkit-selection,
+::selection {
+  background-color: $secondary-color;
+  color: #fff;
+}
+
+.form-select {
+  height: 32px;
+  line-height: 32px;
+  background-color: $grey-clear;
+  padding: 0 0.25em;
+}
+
+// Remove padding from chosen.
+.chosen-container.form-select { padding: 0; }
+
+// Currently not using, here for posterity.
+// .form-select.form-select--large {
+//   height: 38px;
+//   line-height: 38px;
+// }
+
+.form-textarea,
+.form-select,
+.form-text {
+  @include font-size(18px);
+}
+
+.resizable-textarea .grippie { margin-top: 1px; }
+
+.form-checkbox,
+.form-radio,
+.form-textarea,
+.form-select,
+.form-text {
+  &[disabled] { opacity: 0.5; }
+}

@@ -1,0 +1,50 @@
+
+// Pull quotes.
+// .pullquote-container {
+//   position: relative;
+// }
+
+// .pullquote-quote {
+//   @extend %lead;
+//   z-index: 1;
+//   padding: 1em;
+//   margin: 0 0 1em $vertical-space;
+
+//   &:before,
+//   &:after {
+//     position: absolute;
+//     line-height: 1;
+//     @include font-size(48px);
+//     color: lighten($text-color, 30%);
+//   }
+//   &:before {
+//     content: '“';
+//     margin-left: -0.5em;
+//   }
+//   &:after { content: '”'; }
+// }
+
+// // Inserts quotation marks around pullquoted text.
+// .pullquote-quote.pullquote-left {
+//   margin-left: 0;
+//   margin-right: 1em;
+// }
+
+// .pullquote-quote .attribution {
+//   float: right;
+//   padding-top: 1em;
+//   &:before { content: "\2014"; }
+// }
+
+// @include breakpoint(0 $tablet - 1) {
+//   .pullquote-quote {
+//     margin: $vertical-space 0;
+//     display: block;
+//   }
+// }
+
+// @include breakpoint($tablet, true) {
+//   .pullquote-quote { width: 30%; }
+//   .pullquote-quote.pullquote-left { float: left; }
+//   .pullquote-quote.pullquote-right { float: right; }
+// }

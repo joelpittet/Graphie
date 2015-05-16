@@ -1,0 +1,7 @@
+@mixin link-hover-color($link-hover-color) {
+  &:focus,
+  &:hover,
+  &:active {
+    color: $link-hover-color;
+  }
+}

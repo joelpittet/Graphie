@@ -1,0 +1,9 @@
+// Provides the button background color and 70% hover/active state.
+@mixin button-background($color) {
+  background-color: $color;
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: rgba($color, .7);
+  }
+}

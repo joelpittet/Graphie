@@ -1,0 +1,18 @@
+@mixin animation($content) {
+/*  @include experimental(animation, $content, -webkit, -moz, not -o, not -ms, official);*/
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}

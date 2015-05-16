@@ -1,0 +1,29 @@
+//
+// @file
+// Print styling
+//
+// We provide some sane print styling for Drupal using Zen's layout method.
+//
+//
+// By importing this CSS file as media "all", we allow this print file to be
+// aggregated with other stylesheets, for improved front-end performance.
+//
+@media print {
+
+  // Underline all links.
+  a:link,
+  a:visited {
+    text-decoration: underline !important;
+  }
+
+  // Only display useful links.
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  // Add visible title after abbreviations.
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+}

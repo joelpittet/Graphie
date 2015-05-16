@@ -1,0 +1,19 @@
+
+// Image Styles.
+.image-left,
+.image-right {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+@include breakpoint($tablet) {
+  .image-left {
+    float: left;
+    margin-right: 1em;
+  }
+
+  .image-right {
+    float: right;
+    margin-left: 1em;
+  }
+}

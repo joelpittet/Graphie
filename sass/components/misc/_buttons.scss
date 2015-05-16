@@ -1,0 +1,126 @@
+// BUTTONS
+
+// Base Button
+%button,
+.button {
+  display: inline-block;
+
+  height: 32px;
+  line-height: 32px;
+
+  border: 0;
+  margin: 0;
+  padding: 0 1.5em;
+
+
+  transition: background-color .3s ease-in-out;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  overflow: visible;
+  cursor: pointer;
+
+  &:focus { outline: none; }
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+/* Fill width of container */
+.button--full {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center;
+}
+
+.button--small {
+  height: 24px;
+  line-height: 24px;
+
+  border: 0;
+  margin: 0;
+  padding: 0 1em;
+  font-size: 0.8em;
+}
+
+/* Inherit sizing from parent  */
+.button--natural {
+  vertical-align: baseline;
+  font-size: inherit;
+  line-height: inherit;
+  height: auto;
+}
+
+button.button--natural {
+  background: none;
+  border: 0;
+}
+
+// Button Variations.
+.checkout-continue, // Commerce checkout.
+.button-primary, // For webform.
+.button--primary {
+  color: #fff;
+  @include link-hover-color(#fff);
+  @include button-background($primary-color);
+}
+
+.button--inverse {
+  color: $primary-color !important;
+  @include link-hover-color($primary-color);
+  @include button-background(#fff);
+}
+
+.button--secondary {
+  color: #777;
+  @include link-hover-color(#777);
+  @include button-background(#ddd);
+}
+
+// Adjacent buttons should have some space between them.
+.button + .button,
+.button + a {
+  @include breakpoint(0 $tablet - 1) {
+    margin-top: $vertical-space / 2;
+  }
+  @include breakpoint($tablet, true) {
+    margin-left: 0.5em;
+  }
+}
+
+.form-actions {
+  // Fix form actions inline. (Cart Page.)
+  .button + .button,
+  .button + a {
+    margin-left: 0.5em;
+  }
+}
+
+// override the adjacent buttons above for full width ones.
+.button + .button--full {
+  margin-left: 0;
+  margin-top: $vertical-space / 2;
+}
+
+.button--spa-locator {
+  @extend %button;
+  color: #fff;
+  @include link-hover-color(#fff);
+  @include button-background($primary-color);
+}
+
+input[disabled].button,
+button[disabled] {
+  opacity: 0.5;
+  background-color: #777;
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: #777;
+  }
+}
