@@ -1,4 +1,9 @@
 .sass-cache/
 
+# Bower and Node folders.
 bower_components/
 node_modules/
+
+# Comments and Notes on the theme.
+notes/
+working/

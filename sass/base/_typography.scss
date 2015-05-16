@@ -1,0 +1,147 @@
+
+// BASE-TYPOGRAPHY
+
+html {
+  color: $text-color;
+  font-family: $base-font;
+  font-size: $base-font-size;
+  font-weight: normal;
+  line-height: 1.3125;
+}
+
+body {
+  // Help font rendering.
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+// STYLES
+
+em, i {
+  font-style: italic;
+}
+
+strong, b {
+  font-style: normal;
+  font-weight: bold;
+}
+
+// HEADINGS
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+  font-style: normal;
+  font-weight: 400;
+
+  color: $grey-dark;
+
+  margin-top: 0;
+  margin-bottom: 0.2625em;
+  padding: 0;
+
+  transition: font-size 0.3s ease-out;
+
+  // Try to get ligatures to work though if the font doesn't have them...
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+
+  a,
+  a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $primary-color;
+  }
+
+}
+
+// Heading Overrides.
+h1 {
+  font-size: $h1-font-size;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  font-weight: 300;
+  color: $primary-color;
+}
+
+h4 {
+  font-size: $h4-font-size;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $primary-color;
+}
+
+// Don't turn these on unless you have something for them...
+
+// h5 {
+//   @include font-size(16px);
+// }
+
+// h6 {
+//   @include font-size(14px);
+//   color: #5A5A5C;
+// }
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid $grey-clear;
+  margin: ($vertical-space/2) auto;
+  color: $grey-clear;
+  background-color: $grey-clear;
+}
+
+// PARAGRAPHS
+p,
+%p {
+  margin: 0 0 1em;
+}
+
+// Quotes
+blockquote {
+  clear: both;
+
+  padding: 0 $horizontal-space;
+  margin: $vertical-space;
+
+  padding: 0;
+  margin: 0;
+
+  p {
+    &:before,
+    &:after {
+      color: lighten($text-color, 30%);
+      position: relative;
+
+      @include font-size(48px);
+      top: 18px;
+      line-height: 0.2;
+
+    }
+    &:before {
+      content: "\201C";
+      left: -5px;
+    }
+    &:after {
+      content: "\201D";
+      right: 5px;
+    }
+  }
+}
+
+q {
+  font-style: italic;
+}

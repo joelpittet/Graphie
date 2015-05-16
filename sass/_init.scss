@@ -1,0 +1,32 @@
+// Initialization partial.
+//
+// To make it easier to use all variables and mixins in any SASS file in this
+// theme, each .scss file has a @import "init" declaration. And this _init.scss
+// file is in charge of importing all the other partials needed for the theme.
+//
+// In addition this file should not produce any CSS output whatsoever as it may
+// be included in multiple files.
+//
+// This initialization partial is organized in this way:
+// - First we set any shared SASS variables.
+// - Next we import our SASS libraries.
+// - Last we define our custom mixins for this theme.
+
+// All our theme's variables.
+@import "variables";
+
+// Include all the libraries.
+@import "libraries";
+
+// Now we add our custom helper mixins.
+// // @import "mixins/*";
+@import "mixins/animate";
+@import "mixins/button-background";
+@import "mixins/clearfix";
+@import "mixins/em";
+@import "mixins/font-size";
+@import "mixins/form-elements";
+@import "mixins/link-hover-color";
+@import "mixins/transform";
+@import "mixins/vertical-align";
+@import "mixins/visibility";

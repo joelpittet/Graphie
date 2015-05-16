@@ -1,0 +1,37 @@
+select,
+input,
+textarea {
+  border: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+fieldset {
+  margin: 0 0 1em;
+  padding: ($vertical-space / 2) $horizontal-space;
+  border-color: #eee;
+}
+
+legend {
+  @include font-size(18px);
+  padding: 0 0.8em;
+}
+
+// Normalize Overrides
+input[type="search"] { box-sizing: border-box; }
+
+button,
+input[type="button"] {
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  // Fix iOS.
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  // http://stackoverflow.com/questions/5263260/stop-safari-mobile-from-giving-input-buttons-rounded-corners
+  // -webkit-appearance: none; breaks chrome checkboxes/radios - JP.
+}

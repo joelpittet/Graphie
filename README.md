@@ -1,5 +1,5 @@
 # Graphie
-## Drupal 8 theme.
+## Drupal 8 theme
 
 Simple, clean, minimal configurations Drupal 8 theme.
 

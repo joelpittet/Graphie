@@ -1,0 +1,27 @@
+//
+// TABLES
+//
+table {
+  width: 100%;
+  margin-bottom: $vertical-space;
+}
+
+th {
+  padding: 0.5em 1em;
+
+  a,
+  a.active img { margin: 2px 3px; }
+}
+
+td { padding: 0.5em 1em; }
+
+tr + tr td { border-top: 1px solid #ccc; }
+
+thead th {
+  text-align: left;
+  border-bottom: 2px solid #ccc;
+}
+
+th {
+  font-weight: bold;
+}

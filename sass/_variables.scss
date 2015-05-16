@@ -1,0 +1,83 @@
+
+// The amount lists, blockquotes and comments are indented.
+$indent-amount: 30px;
+
+//
+// COLORS.
+//
+$orange: #e4621c;
+$pale-orange: #efa47b;
+$green: #8b9931;
+$red: #b33630;
+$yellow: #d6c460;
+
+$light-grey: #eee;
+$mid-grey: #ccc;
+$grey: #6a7076;
+$dark-grey: #58595b;
+
+// Primary Color for the site.
+$primary-color: $green;
+$secondary-color: #dbc52c;
+
+// Base color scheme.
+$text-color: #665f57;
+$error-text-color: #db2c2c;
+
+
+$blue: #59c2ed;
+
+$orange: #f09416;
+
+$grey-clear: #e6e7e8;
+$grey-medium: #474f5e;
+$grey-dark: #414042;
+
+$white: #fff;
+$almost-white: #fdfeff;
+
+// Warning Colors.
+$red: #b33630;
+$yellow: #d6c460;
+$green: #8b9931;
+
+// Primary Color for the site.
+$primary-color: $blue;
+$secondary-color: $orange;
+
+// Base color scheme.
+$text-color: $grey-dark;
+$error-text-color: #db2c2c;
+
+$link-color: $blue;
+$link-color-hover: darken($blue, 20%);
+
+//
+// TYPOGRAPHY.
+//
+$header-font: 'Merriweather Sans', Helvetica, Arial, sans-serif;
+$base-font: 'Merriweather', Georgia, Times, serif;
+
+$base-font-size: 16px;
+$base-line-height: $base-font-size * 1.3125;
+
+$h1-font-size: 2    * $base-font-size;
+$h2-font-size: 1    * $base-font-size;
+$h3-font-size: 1.8  * $base-font-size;
+$h4-font-size: 1    * $base-font-size;
+$h5-font-size: 0.83 * $base-font-size;
+$h6-font-size: 0.67 * $base-font-size;
+
+//
+// SPACING.
+//
+$vertical-space: 20px;
+$horizontal-space: 20px;
+
+//
+// GRID.
+//
+$tablet: 640px;
+$tablet-portrait: 960px;
+$desktop: 1180px;
+
