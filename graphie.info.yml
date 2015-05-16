@@ -1,0 +1,19 @@
+name: Graphie
+type: theme
+description: Drupal 8 Theme
+version: 1.0
+core: 8.x
+engine: twig
+screenshot: img/screenshot.png
+
+libraries:
+  - graphie/base
+
+stylesheets-remove:
+  - core/assets/vendor/normalize-css/normalize.css
+  - system.theme.css
+
+regions:
+  content: 'Content'
+  menu: 'Menu'
+  footer: 'Footer'

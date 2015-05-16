@@ -1,0 +1,14 @@
+base:
+  version: 1.0
+
+  css:
+    theme:
+      js/prism/prism.css: {}
+      css/main.css: {}
+
+  js:
+    js/prism/prism.js: {}
+    js/main.js: {}
+
+  dependencies:
+    - core/jquery
