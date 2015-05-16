@@ -9,19 +9,19 @@
  */
 
 
-// %l-constrained {
-//   max-width: 980px;
-// }
+%l-constrained {
+  max-width: 980px;
+}
 
 
-// $basic-layout: (
-//   columns: 12,
-//   gutters: 1/4,
-//   math: fluid,
-//   gutter-position: inside
-// );
+$basic-layout: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  gutter-position: inside
+);
 
-// .layout-container {
-//   max-width: em($desktop);
-//   margin: 2em auto;
-// }
+.layout-container {
+  max-width: em($desktop);
+  margin: 2em auto;
+}
