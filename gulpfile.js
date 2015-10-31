@@ -76,9 +76,9 @@ gulp.task('sass', function() {
         // Configure it to use SCSS files.
         extensions: ['.scss']
     }))
-    // Initializes sourcemaps
+    // Initializes sourcemaps.
     .pipe(sourcemaps.init())
-    .pipe(sass(sass_options))
+    .pipe(sass(sass_options).on('error', sass.logError))
     .pipe(autoprefixer(autoprefixer_options))
     // Writes sourcemaps into the CSS file.
     .pipe(sourcemaps.write('./maps'))
