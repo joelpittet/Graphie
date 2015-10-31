@@ -28,12 +28,6 @@
   margin-top: 0;
 }
 
-// Max length message override.
-.counter.messages {
-  padding: 0.25em 0.5em;
-  margin: 0.5em 0;
-}
-
 .messages__inner {
   @extend %l-constrained;
   position: relative;
@@ -58,7 +52,6 @@
   }
 }
 
-.messages.warning,
 .messages--warning {
   background-color: $yellow;
   background-position: 0 50%;
@@ -68,7 +61,6 @@
   }
 }
 
-.messages.error,
 .messages--error {
   color: #fff;
   // important because of div.error.
@@ -80,9 +72,7 @@
   }
 }
 
-.messages.status,
 .messages--status,
-.messages.ok,
 .messages--ok {
   background-color: $green;
   background-position: 0 50%;

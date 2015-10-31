@@ -8,10 +8,25 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-css-globbing": "^0.1.7",
-    "gulp-sass": "^1.3.3",
-    "gulp-sourcemaps": "^1.5.2"
-  }
+  "dependencies": {
+    "del": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cache": "latest",
+    "gulp-concat": "latest",
+    "gulp-css-globbing": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-jshint": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-notify": "latest",
+    "gulp-sass": "latest",
+    "gulp-shell": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-svg2png": "latest",
+    "gulp-uglify": "latest",
+    "imagemin-pngquant": "latest",
+    "lodash": "latest",
+    "node-sass": "latest"
+  },
+  "devDependencies": {}
 }

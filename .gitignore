@@ -1,8 +1,10 @@
-.sass-cache/
-
-# Bower and Node folders.
+# Ignore the node modules folder (created by 'npm install').
 bower_components/
 node_modules/
+
+# We absolutely don't want to have the .sass-cache in git.
+.sass-cache
+*.map
 
 # Comments and Notes on the theme.
 notes/

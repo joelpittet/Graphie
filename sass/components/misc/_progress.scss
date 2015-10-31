@@ -37,16 +37,6 @@
         transparent 66%)
     );
     transition: width 0.5s ease-out 0s;
-    @include animation(animate-stripes 3s linear infinite );
+    animation: animate-stripes 3s linear infinite;
   }
 }
-
-// // Progress bar.
-// .progress-wrapper .progress {
-//   margin-bottom: 10px;
-//   .bar {
-//     border: 0 none;
-//     margin: 0;
-//   }
-// }
-

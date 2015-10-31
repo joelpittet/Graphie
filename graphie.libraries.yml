@@ -2,20 +2,24 @@ base:
   version: 1.0
 
   css:
-    components:
-      '//fonts.googleapis.com/css?family=Merriweather:300,300italic,700,700italic,400,400italic|Merriweather+Sans:400,400italic,700,700italic,300italic,300' : {
-        external: TRUE
-      }
-      '//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css' : {
-        external: TRUE
-      }
+    base:
+      '//fonts.googleapis.com/css?family=Merriweather:300,300italic,700,700italic,400,400italic|Merriweather+Sans:400,400italic,700,700italic,300italic,300':
+        type: external
+      '//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css':
+        type: external
     theme:
-      js/prism/prism.css: {}
       css/main.css: {}
 
+  # js:
+  #   js/main.js: {}
+
+  # dependencies:
+  #   - core/jquery
+
+prism:
+  version: 1.0
+  css:
+    base:
+      js/prism/prism.css: {}
   js:
     js/prism/prism.js: {}
-    js/main.js: {}
-
-  dependencies:
-    - core/jquery

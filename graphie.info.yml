@@ -6,8 +6,12 @@ core: 8.x
 engine: twig
 screenshot: img/screenshot.png
 
+# Living on the edge (wild west)
+base theme: false
+
 libraries:
   - graphie/base
+  - graphie/prism
 
 stylesheets-remove:
   - core/assets/vendor/normalize-css/normalize.css
